@@ -48,18 +48,27 @@ def detect(file):
     return tmp
 
 def app():
-    file = st.file_uploader('Upload Video')
+    file = st.file_uploader('Upload Video ')
     if st.button('Detect'):
         with st.spinner('Detecting Potholes.....'):
             if file is not None:
-                output_file = detect(file)    
-        
-            with open(output_file.name, 'rb') as f: 
-                b = f.read()
-            st.video(b)
-        f.close()
-        output_file.close()
-        os.unlink(output_file.name)
+                output_file = detect(file)
+            
+            cap = cv2.VideoCapture(output_file.name)
+            frames = []
+            while True:
+                ret, frame = cap.read()
+                if ret:
+                    frames.append(frame)
+                else:
+                    break
+            cap.release()
+
+            # Concatenate frames vertically to display complete video
+            video = cv2.vconcat(frames)
+            st.video(video)
+        # output_file.close()
+        # os.unlink(output_file.name)
 
 if __name__ == '__main__':
     app()
