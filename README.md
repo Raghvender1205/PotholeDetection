@@ -13,6 +13,9 @@ A Web based implementation of Pothole Detection using Deep Learning
 python gradioDemo.py
 ```
 
+Added HuggingFace Pothole Detection Space
+- https://huggingface.co/spaces/Raghvender/PotholeDetection
+
 ### Prerequisites
 1. torch 
 2. ultralytics
