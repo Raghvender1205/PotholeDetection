@@ -1,7 +1,5 @@
 import gradio as gr
 import cv2
-import requests
-import os
 from ultralytics import YOLO
 
 model = YOLO('best.pt')
