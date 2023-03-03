@@ -2,10 +2,9 @@
 A Web based implementation of Pothole Detection using Deep Learning
 
 ## TODO
-1. Fix the Video Write Issue 
-2. Fix the Codec issue 
-3. Add more good videos for testing
-4. Add more options and features
+1. Add more good videos for testing
+2. Add more options and features
+3. Work on `Google Earth` Approach
 
 ## Usage
 `Gradio` Demo is working currently working 
