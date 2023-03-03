@@ -31,8 +31,8 @@ outputs_video = [
 ]
 interface_video = gr.Interface(
     fn=show_preds,
-    inputs=input_video,
-    outputs=outputs_video,
+    inputs=input_video, # type: ignore
+    outputs=outputs_video, # type: ignore
     title='Pothole Detection',
     #examples=video_path,
     cache_examples=False,

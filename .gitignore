@@ -8,6 +8,7 @@ __pycache__/
 
 # predict folder 
 /runs/detect/
+/implementations
 
 # Distribution / packaging
 .Python
