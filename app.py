@@ -7,7 +7,7 @@ import os
 st.title('Pothole Detection')
 
 def detect(file):
-    cmd = f'yolo task=detect mode=predict model=best.pt source=test_videos/{file.name} hide_labels=True'
+    cmd = f'yolo task=detect mode=predict model=best.pt source=test_videos/{file.name} hide_labels=False'
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
     output, err = process.communicate()
 
@@ -18,7 +18,7 @@ def detect(file):
 
     cap = cv2.VideoCapture(f'test_videos/{file.name}')
     # Codec and VideoWriter
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fourcc = cv2.VideoWriter_fourcc(*'h264')
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
     out_path = os.path.join('results', 'output.mp4')
