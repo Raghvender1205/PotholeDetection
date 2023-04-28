@@ -12,7 +12,7 @@ A Web based implementation of Pothole Detection using Deep Learning
 python gradioDemo.py
 ```
 
-Added HuggingFace Pothole Detection Space
+Added HuggingFace Pothole Detection Space [Works!!]
 - https://huggingface.co/spaces/Raghvender/PotholeDetection
 
 ### Prerequisites
